@@ -159,7 +159,7 @@ async function sendActivityEmail(activity) {
   await transporter.sendMail({
     from: env.emailFrom,
     to: env.notificationEmail,
-    subject: `[${activity.platform}] ${username}: ${activity.title}`,
+    subject: `[${activity.platform}] New submission⚠️: ${activity.title}`,
     html: buildHtml(activity)
   });
 }
